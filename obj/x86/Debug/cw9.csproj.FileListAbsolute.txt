@@ -1,0 +1,5 @@
+C:\Final\LinqCwiczenia4\LinqCwiczenia\obj\x86\Debug\cw9.csprojAssemblyReference.cache
+C:\Final\LinqCwiczenia4\LinqCwiczenia\obj\x86\Debug\LinqCwiczenia.Form1.resources
+C:\Final\LinqCwiczenia4\LinqCwiczenia\obj\x86\Debug\cw9.Properties.Resources.resources
+C:\Final\LinqCwiczenia4\LinqCwiczenia\obj\x86\Debug\cw9.csproj.GenerateResource.cache
+C:\Final\LinqCwiczenia4\LinqCwiczenia\obj\x86\Debug\cw9.csproj.CoreCompileInputs.cache
