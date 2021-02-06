@@ -389,6 +389,11 @@ namespace LinqCwiczenia
         /// </summary>
         private void Przyklad9Button_Click(object sender, EventArgs e)
         {
+            var res = (from emp in Emps
+                       where emp.Job == "Fontend programmer"
+                       orderby emp.HireDate descending
+                       select emp).Take(1);
+
 
             //ResultsDataGridView.DataSource = result;
         }
