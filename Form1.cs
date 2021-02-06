@@ -355,7 +355,15 @@ namespace LinqCwiczenia
         /// </summary>
         private void Przyklad7Button_Click(object sender, EventArgs e)
         {
-           
+            var res = (from emp in Emps
+                       group emp by emp.Job into Grupa
+                       select new
+                       {
+                           Praca = Grupa.Key,
+                           LiczbaPracownikow = Grupa.Count()
+                       });
+
+
             //ResultsDataGridView.DataSource = result;
         }
 
