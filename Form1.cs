@@ -332,7 +332,7 @@ namespace LinqCwiczenia
                         });
 
 
-            ResultsDataGridView.DataSource = res2.ToList;
+            //ResultsDataGridView.DataSource = res2.ToList;
         }
 
         /// <summary>
@@ -342,6 +342,10 @@ namespace LinqCwiczenia
         /// </summary>
         private void Przyklad6Button_Click(object sender, EventArgs e)
         {
+            var res = (from emp in Emps
+                       join dept in Depts on emp.Deptno equals dept.Deptno
+                       select new { emp.Ename, emp.Job, dept.Dname}).ToList();
+
 
             //ResultsDataGridView.DataSource = result;
         }
@@ -351,7 +355,7 @@ namespace LinqCwiczenia
         /// </summary>
         private void Przyklad7Button_Click(object sender, EventArgs e)
         {
-
+           
             //ResultsDataGridView.DataSource = result;
         }
 
