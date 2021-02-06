@@ -373,12 +373,14 @@ namespace LinqCwiczenia
         /// </summary>
         private void Przyklad8Button_Click(object sender, EventArgs e)
         {
-            /*
-            if (LINQ)
+            
+            if ( (from emp in Emps 
+                  where emp.Job == "Backend programmer" 
+                  select emp).Count() > 0 )
             {
                 WynikTextBox.Text = "Backend programmer istnieje w kolekcji";
             }
-             */
+             
         }
 
         /// <summary>
