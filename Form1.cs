@@ -262,6 +262,8 @@ namespace LinqCwiczenia
 
 
             //2. Lambda and Extension methods
+            var res2 = Emps
+                .Where((emp) => emp.Job == "Backend programmer");
 
 
             ResultsDataGridView.DataSource = res.ToList();
@@ -273,7 +275,6 @@ namespace LinqCwiczenia
         private void Przyklad2Button_Click(object sender, EventArgs e)
         {
             var res = (from emp in Emps
-                       join dept in Depts on emp.Deptno equals dept.Deptno
                        where emp.Job == "Frontend programmer" && emp.Salary > 1000
                        orderby emp.Ename descending
                        select emp).ToList();
@@ -308,7 +309,11 @@ namespace LinqCwiczenia
         private void Przyklad4Button_Click(object sender, EventArgs e)
         {
 
-            //ResultsDataGridView.DataSource = result;
+            var res = Emps
+                        .Where((emp) => emp.Salary == Emps.Max(empp => empp.Salary));
+                        
+
+            ResultsDataGridView.DataSource = res;
         }
 
         /// <summary>
@@ -317,7 +322,17 @@ namespace LinqCwiczenia
         private void Przyklad5Button_Click(object sender, EventArgs e)
         {
 
-            //ResultsDataGridView.DataSource = result;
+            var res2 = Emps
+                        .Where((emp, indx) => emp.Job == "Frontend programmer" && emp.Salary > 1000)
+                        .OrderByDescending(emp => emp.Ename)
+                        .Select(emp => new
+                        {
+                            Nazwisko = emp.Ename,
+                            Praca = emp.Job
+                        });
+
+
+            ResultsDataGridView.DataSource = res2.ToList;
         }
 
         /// <summary>
